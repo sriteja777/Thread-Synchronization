@@ -1,0 +1,4 @@
+Implementation
+
+I am taking every person(players and referee) as a thread. Each time the person enters, I create a thread for him. Then thread calls `enter_academy` function.
+The `enter_academy` function calls `meet_organizer` function. I will store the number of players waiting at organiser and number of referees waiting at organizer in a FIFO queue. In `meet_organizer` function every time a person comes it checks whether number of players at organizer greater than 1 and number of referees at organizer greater than 1. If the above function is satisfied then the players and referees in waiting queue will enter the court and the organizer is now busy. Untill the organizer is unbusy, persons will wait for meeting organizer. Now the players who entered court starts warm up and the referee will adjust requirements. Then after they will start the match. Now the organiser becomes free. Now the waiting players and referees meet the organizer and the process goes on.  
